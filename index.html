@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box
+        }
+
+        body {
+            background-color: rgb(211, 181, 238);
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            font-family:'Times New Roman', Times, serif
+       serif;
+        }
+        main{
+            width: 400px;
+            background-color: rgb(204, 93, 13);
+            padding:1rem;
+            border-radius: 10px;
+        }
+
+         header{
+            text-align: center;
+            margin: 1rem 0;
+        }
+        h1{
+            font-weight: bold;
+           font-size: 2.5rem;
+        }
+         section{
+            display: flex;
+            flex-direction: column;
+         }
+         input{
+            outline: none;
+            border: none;
+            width: 100%;
+            padding: 1rem 5rem;
+            margin: .5rem 0;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+         }
+
+         button{
+            outline: none;
+            margin-top: 1rem;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+         }
+
+         #displayResult{
+            width: 100%;
+             /* background-color: rgb(173, 218, 160);  */
+            margin-bottom: 1rem;
+           
+         }
+         .message{
+            padding: .7rem;
+            /* background-color:rgb(128, 184, 132); */
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 2rem
+
+         }
+
+         .error{
+            background-color: rgb(219, 22, 22);
+         }
+         .success{
+            background-color: rgb(173, 218, 160);
+         }
+        </style>
+
+
+</head>
+<body>
+    <main>  
+        <header>
+            <h1>Bill Splitter</h1>
+        </header> 
+        <section id="displayResult">
+            <div class="message">
+             <h3 id="resultText">Easily Split the bill</h3>   
+            </div>
+        </section>
+        <section>
+        <div>  
+            <input id='amount'  type="number"  placeholder="Enter the bill amount">
+        </div>  
+        <div>
+            <input id='friends' type="number" placeholder="Enter number of friends">
+        </div>
+        <button onclick="cal()">Calculate</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
